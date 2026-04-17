@@ -5,8 +5,6 @@ const port = 8000;
 
 app.use(express.json());
 
-<<<<<<< HEAD
-=======
 const users = {
   users_list: [
     {
@@ -67,13 +65,10 @@ const findUserByNameAndJob = (name, job) => {
   );
 };
 
->>>>>>> 4bf5bdd (Finish express backend assignment)
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-<<<<<<< HEAD
-=======
 app.get("/users", (req, res) => {
   const name = req.query.name;
   const job = req.query.job;
@@ -117,7 +112,6 @@ app.delete("/users/:id", (req, res) => {
   }
 });
 
->>>>>>> 4bf5bdd (Finish express backend assignment)
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
