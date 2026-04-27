@@ -1,17 +1,10 @@
-{
-  "name": "express-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node backend.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "cors": "^2.8.6"
-  }
-}
+import mongoose from "mongoose";
+
+const UserSchema = new mongoose.Schema({
+  name: String,
+  job: String
+});
+
+const User = mongoose.model("User", UserSchema);
+
+export default User;
